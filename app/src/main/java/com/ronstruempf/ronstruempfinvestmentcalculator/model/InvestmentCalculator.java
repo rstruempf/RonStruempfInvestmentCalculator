@@ -8,6 +8,9 @@ package com.ronstruempf.ronstruempfinvestmentcalculator.model;
 public class InvestmentCalculator {
 
     public double futureValue(double P, double r, int n) {
-        return 0;
+        if (Math.round(r*10000) == 0) {
+            return P*n;
+        }
+        return P*(Math.pow(r+1,n) - 1)/r;
     }
 }
