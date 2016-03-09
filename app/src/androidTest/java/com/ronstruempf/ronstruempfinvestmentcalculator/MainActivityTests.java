@@ -36,7 +36,7 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
             }
         });
         getInstrumentation().waitForIdleSync();
-        hold(500);
+        hold(1000);
         getInstrumentation().sendStringSync(value);
     }
 
@@ -104,9 +104,10 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         setEditTextTo(R.id.interest_edit_text, "0.03");
         setEditTextTo(R.id.periods_edit_text, "10");
         clickAButton(R.id.calculate_button);
+
         final TextView fvText = (TextView)getActivity().findViewById(R.id.future_value_text);
         String answer = fvText.getText().toString();
-        assertEquals("11463.88", answer);
+        assertEquals("$11,463.88", answer);
     }
 
 }
