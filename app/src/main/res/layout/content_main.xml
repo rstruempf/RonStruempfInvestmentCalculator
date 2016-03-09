@@ -12,8 +12,72 @@
     tools:context="com.ronstruempf.ronstruempfinvestmentcalculator.MainActivity"
     tools:showIn="@layout/activity_main">
 
+
     <TextView
+        android:id="@+id/payment_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Payment"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/payment_edit_text"
+        android:layout_below="@+id/payment_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/interest_label"
+        android:layout_below="@+id/payment_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Interest Rate"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/interest_edit_text"
+        android:layout_below="@+id/interest_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/periods_label"
+        android:layout_below="@+id/interest_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Periods"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/periods_edit_text"
+        android:layout_below="@+id/periods_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_below="@+id/periods_edit_text"
+        android:text="Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/future_value_text"
+        android:layout_below="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
