@@ -4,6 +4,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * Test MainActivity
@@ -103,9 +104,9 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         setEditTextTo(R.id.interest_edit_text, "0.03");
         setEditTextTo(R.id.periods_edit_text, "10");
         clickAButton(R.id.calculate_button);
-        //final EditText editText = (EditText)getActivity().findViewById(R.id.periods_edit_text);
-        //String actualText = editText.getText().toString();
-        //assertEquals("003", actualText);
+        final TextView fvText = (TextView)getActivity().findViewById(R.id.future_value_text);
+        String answer = fvText.getText().toString();
+        assertEquals("11463.88", answer);
     }
 
 }
